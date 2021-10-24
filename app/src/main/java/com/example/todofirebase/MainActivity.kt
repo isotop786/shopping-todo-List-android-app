@@ -1,5 +1,6 @@
 package com.example.todofirebase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.SparseBooleanArray
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.editText)
         val delete = findViewById<Button>(R.id.delete)
         val clear = findViewById<Button>(R.id.clear)
+        val about = findViewById<Button>(R.id.about)
 //        val itemText = editText.text.toString()
         val listView = findViewById<ListView>(R.id.listView)
 
@@ -61,6 +63,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         // clear end
+
+//        about click
+
+        about.setOnClickListener(){
+            val intent = Intent(this,AboutActivity::class.java)
+            startActivity(intent)
+        }
+
+//        about end
+
 
     }
 
